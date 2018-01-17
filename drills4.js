@@ -26,8 +26,19 @@ let aragorn = lotrConstructor('Aragorn son of Arathorn','Aragorn','Man','Dunneda
 let legolas = lotrConstructor('Legolas','Legolas','Elf','Woodland Realm',8,5);
 let arwen = lotrConstructor('Arwen undomiel','Arwen','Half-Elf','Rivendell',9,5);
 
-lotrCharacters.push(frodo,gandalf);
+lotrCharacters.push(frodo, gandalf, bilbo, aragorn, legolas, arwen);
 
-console.log(frodo.describe());
-console.log(frodo.evaluateFight(gandalf));
+//console.log(frodo.describe());
+//console.log(frodo.evaluateFight(gandalf));
 // console.log(lotrCharacters);
+
+let findAragorn = (lotrCharacters.find(aragorn => {
+  return (aragorn.nickname === 'Aragorn')
+}))
+
+//console.log(findAragorn.describe());
+
+let hobbitSelector = lotrCharacters.filter(raceCheck => raceCheck.race === "Hobbit");
+let attackAboveFive = lotrCharacters.filter(attackCheck => attackCheck.attack > 5);
+//console.log(hobbitSelector);
+console.log(attackAboveFive);
