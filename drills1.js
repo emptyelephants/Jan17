@@ -20,7 +20,7 @@ function objectUpdater(obj){
 
 return obj;
 }
-console.log(objectUpdater(firstObj));
+// console.log(objectUpdater(firstObj));
 //console.log(createMyObject());
 
 
@@ -37,4 +37,24 @@ function personMaker() {
 }
 
 const myPerson = personMaker();
-console.log(personMaker().fullName());
+// console.log(personMaker().fullName());
+
+var sampleObj = { foo: 'foo', bar: 'bar', bizz: 'bizz', bang: 'bang', };
+function keyDeleter(obj){
+  delete obj.foo;
+  delete obj.bar;
+  return obj;
+}
+console.log(keyDeleter(sampleObj));
+
+
+
+
+
+
+
+
+
+
+
+
