@@ -7,3 +7,19 @@ const loaf = {
 };
 
 console.log(loaf.hydration());
+
+const objA = {
+  foo:'foo-',
+  bar:'bar-',
+  fum:'fum-',
+  quux:'quux-',
+  spam:'spam-',
+}
+for(index in objA){
+  console.log(index+objA[index]);
+}
+// ask mentor how , for better understanding
+// for(let i=0;i<objA.length;i++){
+//   console.log('old for loop');
+//   console.log(objA[i]);
+// }
