@@ -106,15 +106,16 @@ function decodeMap (message) {
     d: 4
   }
 
-  return message.split(" ").reduce(decoderFunction, "") 
-    function decoderFunction (answerString, words) {
-      if (decoder.hasOwnProperty(words[0])) {
-        return answerString + (words[decoder[words[0]]]);
-        } else return answerString + " ";
-    }
+//${jobArray[i].hasOwnProperty('boss') ? `reports to ${jobArray[i].boss}`:`reports to nobody`} \n`
+  const arrowFunction = (answerString, words) => decoder.hasOwnProperty(words[0]) ? answerString + (words[decoder[words[0]]]) : answerString + " ";
+
+  return message.split(" ").reduce(arrowFunction, "");
 }
 
 console.log(decodeMap('craft block argon meter bells brown croon droop'));
 
-
-
+//     function decoderFunction (answerString, words) {
+//       if (decoder.hasOwnProperty(words[0])) {
+//         return answerString + (words[decoder[words[0]]]);
+//         } else return answerString + " ";
+//     }
