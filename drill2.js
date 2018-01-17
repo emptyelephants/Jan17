@@ -7,10 +7,41 @@ function makeStudentReport(data) {
 }
 
 
-const testData = [
-  { name: 'Jane Doe', grade: 'A' },
-  { name: 'John Dough', grade: 'B' },
-  { name: 'Jill Do', grade: 'A' },
-];
+// const testData = [
+//   { name: 'Jane Doe', grade: 'A' },
+//   { name: 'John Dough', grade: 'B' },
+//   { name: 'Jill Do', grade: 'A' },
+// ];
 
-makeStudentReport(testData);
+//makeStudentReport(testData);
+
+function enrollInSummerSchool(students){
+  for(let i = 0; i<students.length;i++){
+    students[i].status = 'In Summer School'
+  }
+  return students;
+}
+
+
+let testData = [
+    {
+      name: 'Burt',
+      status: 'Playing hooky',
+      course: 'Biology',
+    },
+    {
+      name: 'Melanie',
+      status: 'Sick',
+      course: 'Mathematics',
+    },
+    {
+      name: 'Leonard',
+      status: 'AWOL',
+      course: 'Computer science',
+    },
+  ];
+
+console.log(enrollInSummerSchool(testData));
+
+
+
