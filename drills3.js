@@ -23,3 +23,8 @@ for(index in objA){
 //   console.log('old for loop');
 //   console.log(objA[i]);
 // }
+
+let food = {
+  meals: ['breakfast', 'second breakfast', 'elevenses', 'lunch', 'afternoon tea', 'dinner', 'supper']
+}
+console.log(food.meals[3]);
