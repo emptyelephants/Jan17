@@ -28,3 +28,26 @@ let food = {
   meals: ['breakfast', 'second breakfast', 'elevenses', 'lunch', 'afternoon tea', 'dinner', 'supper']
 }
 console.log(food.meals[3]);
+
+let job1 = {
+  name: 'John Doe',
+  jobTitle: 'survivor man'
+}
+
+let job2 = {
+  name: 'Jane Doe',
+  jobTitle: 'survivor woman'
+}
+
+let job3 = {
+  name: 'Bumper',
+  jobTitle: 'cat'
+}
+
+function jobsToArray(...jobs) {
+  let jobArray = [job1, job2, job3];
+  return jobArray;
+}
+//(...items){ const [item1,item2,item3] = items; return items; }
+
+console.log(jobsToArray(job1, job2, job3));
