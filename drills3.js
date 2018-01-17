@@ -76,8 +76,45 @@ console.log(jobsToArray(job1, job2, job3));
 
 
 
+// function decode(message) {
+//   let result = [];
+//   let words = message.split(' ');
+//   let code = {
+//     a: function() {words[i][2];},
+//     b: function() {words[i][3];},
+//     c: function() {words[i][4];},
+//   };
+//   /*console.log(Object.keys(code));*/
+//   for ( let i = 0; i < words.length; i++) {
+//     for (let k = 0; k < Object.keys(code).length; k++) {
+//       if(Object.keys(code)[k] === words[i][0]) {
+//         console.log(words[i][0]);
+//       } else {
+//         console.log('n');
+//       }
+//     }
+//   }
+// }
+// decode('craft block argon meter bells brown croon droop');
 
 
+function decodeMap (message) {
+  let decoder = {
+    a: 1,
+    b: 2,
+    c: 3,
+    d: 4
+  }
+
+  return message.split(" ").reduce(decoderFunction, "") 
+    function decoderFunction (answerString, words) {
+      if (decoder.hasOwnProperty(words[0])) {
+        return answerString + (words[decoder[words[0]]]);
+        } else return answerString + " ";
+    }
+}
+
+console.log(decodeMap('craft block argon meter bells brown croon droop'));
 
 
 
