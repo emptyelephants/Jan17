@@ -9,5 +9,17 @@ function createMyObject()  {
   };
   return myObject;
 }
+let firstObj = createMyObject();
 
-  console.log(createMyObject());
+function objectUpdater(obj){
+  
+  obj.foo='foo';
+  obj.bar='bar';
+  obj.bizz='bizz';
+  obj.bang='bang';
+
+return obj;
+}
+console.log(objectUpdater(firstObj));
+//console.log(createMyObject());
+
