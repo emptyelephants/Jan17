@@ -16,7 +16,7 @@ const objA = {
   spam:'spam-',
 }
 for(index in objA){
-  //console.log(index+objA[index]);
+  console.log(index + " : " + objA[index]);
 }
 // ask mentor how , for better understanding
 // for(let i=0;i<objA.length;i++){
